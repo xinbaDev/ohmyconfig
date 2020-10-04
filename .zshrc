@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/alex/.oh-my-zsh"
+#export ZSH="/home/alex/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -62,9 +62,9 @@ ZSH_THEME="kennethreitz"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -96,8 +96,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gst="git status"
 alias glg="git log"
-alias gad="black $(git diff --cached --name-only) && git add"
-alias wp="cd /home/alex/python/61Financial/djangorest"
 function cd {
     builtin cd "$@" && ls -F
 }
@@ -110,3 +108,5 @@ alias ..="cd .."
     }
     zle -N add_sudo
     bindkey "^s" add_sudo
+
+alias loginvpn="ssh -i ~/key/vpn_wireguard.pem ubuntu@3.25.225.144"
